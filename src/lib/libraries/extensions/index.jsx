@@ -46,14 +46,14 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import qrcodeIconURL from './qrcode/qrcode.png';
+import qrcodeInsetIconURL from './qrcode/qrcode-small.svg';
+
 import numberbankIconURL from './numberbank/numberbank_entry.png';
 import numberbankInsetIconURL from './numberbank/numberbank_inset.png';
 
 import pasorichIconURL from './pasorich/pasorich.png';
 import pasorichInsetIconURL from './pasorich/pasorich-small.png';
-
-import qrcodeIconURL from './qrcode/qrcode.png';
-import qrcodeInsetIconURL from './qrcode/qrcode-small.svg';
 
 export default [
     {
