@@ -49,25 +49,7 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 import numberbankIconURL from './numberbank/numberbank_entry.png';
 import numberbankInsetIconURL from './numberbank/numberbank_inset.png';
 
-import pasorichIconURL from './pasorich/pasorich.png';
-import pasorichInsetIconURL from './pasorich/pasorich-small.png';
-
 export default [
-    {
-        name: 'PaSoRich 0.7.1',
-        extensionId: 'pasorich',
-        collaborator: 'con3office',
-        iconURL: pasorichIconURL,
-        insetIconURL: pasorichInsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage='Read SmartCard IDm.'
-                description='Read SmartCard IDm.'
-                id='gui.extension.pasorichblocks.description'
-            />
-        ),
-        featured: true
-    },
     {
         name: 'NumberBank 2.0',
         extensionId: 'numberbank',
