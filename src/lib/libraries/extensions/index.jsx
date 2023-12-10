@@ -52,6 +52,9 @@ import numberbankInsetIconURL from './numberbank/numberbank_inset.png';
 import pasorichIconURL from './pasorich/pasorich.png';
 import pasorichInsetIconURL from './pasorich/pasorich-small.png';
 
+import qrcodeIconURL from './qrcode/qrcode.png';
+import qrcodeInsetIconURL from './qrcode/qrcode-small.svg';
+
 export default [
     {
         name: 'PaSoRich 0.7.1',
@@ -83,6 +86,45 @@ export default [
         ),
         internetConnectionRequired: true,
         featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage='QR Code'
+                description='Name for the QR Code extension'
+                id='gui.extension.qrcodeblocks.name'
+            />
+        ),
+        extensionId: 'qrcode',
+        collaborator: 'Sugiura Lab',
+        iconURL: qrcodeIconURL,
+        insetIconURL: qrcodeInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='Scan QR Code.{credit_en}'
+                description='Description for the QR Code extension'
+                values={{
+                    credit_ja:<div style={{fontSize: '0.6em'}}>QRコードは株式会社デンソーウェーブの登録商標です。</div>,
+                    credit_ja_Hira:<div style={{fontSize: '0.6em', lineHeight: '1.3', marginTop: '0.5em'}}>QRコードはかぶしきがいしゃデンソーウェーブのとうろくしょうひょうです。</div>,
+                    credit_en:<div style={{fontSize: '0.6em'}}>QR Code is a registered trademark of DENSO WAVE.</div>
+                }}
+                id='gui.extension.qrcodeblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false,
+        translationMap: {
+          'ja': {
+              'gui.extension.qrcodeblocks.name': 'QRコード',
+              'gui.extension.qrcodeblocks.description': 'QRコードを読み取ります。{credit_ja}'
+          },
+          'ja-Hira': {
+              'gui.extension.qrcodeblocks.name': 'QRコード',
+              'gui.extension.qrcodeblocks.description': 'QRコードをよみとります。{credit_ja_Hira}'
+          }
+        }
     },
     {
         name: (
