@@ -95,10 +95,10 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 if (false) {}
 
 
-// ?project=https://example.com/project.sb3
+// ?project=https://example.com/project.sb3    
 var onVmInit = function onVmInit(vm) {
   // Load a project from a URL. Example: ?project_url=/example.sb3
-  var projectLoaded = false;
+  var projectLoaded = true;
 
   // We need to wait the VM start and the default project to be loaded before
   // trying to load the url project, otherwiste we can get a mix of both.
@@ -170,6 +170,13 @@ document.body.appendChild(appTarget);
 react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(WrappedPlayer, {
   isPlayerOnly: true
 }), appTarget);
+function resizerender() {
+  react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(WrappedPlayer, {
+    isPlayerOnly: true,
+    isFullScreen: true
+  }), appTarget);
+}
+setTimeout(resizerender, 1500);
 
 /***/ })
 
