@@ -19,7 +19,8 @@ if (process.env.NODE_ENV === 'production' && typeof window === 'object') {
 
 import styles from './player.css';
 
-// ?project=https://example.com/project.sb3
+// ?project=https://example.com/project.sb3 
+
 const onVmInit = vm => {
 
     // Load a project from a URL. Example: ?project_url=/example.sb3
@@ -47,12 +48,15 @@ const onVmInit = vm => {
                                 .catch(error => {
                                     projectLoaded = false;
                                     console.error('Failed to load project. ' + error);
-                                });
+                                }
+                            );
                         }
-                    });
+                    }
+                );
             }
         }
     });
+
 };
 
 
@@ -60,11 +64,11 @@ const Player = ({isPlayerOnly, onSeeInside, projectId}) => (
     <Box className={classNames(isPlayerOnly ? styles.stageOnly : styles.editor)}>
         {isPlayerOnly && <button onClick={onSeeInside}>{'See inside'}</button>}
         <GUI
+            onVmInit={onVmInit}
             canEditTitle
             enableCommunity
             isPlayerOnly={isPlayerOnly}
             projectId={projectId}
-            onVmInit={onVmInit}
         />
     </Box>
 );
@@ -100,3 +104,8 @@ const appTarget = document.createElement('div');
 document.body.appendChild(appTarget);
 
 ReactDOM.render(<WrappedPlayer isPlayerOnly />, appTarget);
+
+function resizerender() {
+    ReactDOM.render(<WrappedPlayer isPlayerOnly isFullScreen />, appTarget);
+}
+setTimeout(resizerender, 1500);

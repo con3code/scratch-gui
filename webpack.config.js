@@ -184,7 +184,7 @@ module.exports = [
                 chunks: ['lib.min', 'player'],
                 template: 'src/playground/index.ejs',
                 filename: 'player.html',
-                title: 'Scratch 3.0 GUI: Player Example'
+                title: 'Scratch 3.0 GUI: Player'
             }),
             new CopyWebpackPlugin({
                 patterns: [
