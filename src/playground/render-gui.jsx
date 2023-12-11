@@ -57,9 +57,8 @@ export default appTarget => {
         }
     }
 
-    
+
     // ?project=https://example.com/project.sb3
-        
     const onVmInit = vm => {
 
         // Load a project from a URL. Example: ?project_url=/example.sb3
@@ -87,9 +86,11 @@ export default appTarget => {
                                     .catch(error => {
                                         projectLoaded = false;
                                         console.error('Failed to load project. ' + error);
-                                    });
+                                    }
+                                );
                             }
-                        });
+                        }
+                    );
                 }
             }
         });
