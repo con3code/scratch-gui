@@ -138,7 +138,8 @@ var Player = function Player(_ref) {
     canEditTitle: true,
     enableCommunity: true,
     isPlayerOnly: isPlayerOnly,
-    projectId: projectId
+    projectId: projectId,
+    onVmInit: onVmInit
   }));
 };
 Player.propTypes = {
