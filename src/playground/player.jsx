@@ -64,6 +64,7 @@ const Player = ({isPlayerOnly, onSeeInside, projectId}) => (
             enableCommunity
             isPlayerOnly={isPlayerOnly}
             projectId={projectId}
+            onVmInit={onVmInit}
         />
     </Box>
 );
