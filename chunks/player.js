@@ -95,10 +95,11 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 if (false) {}
 
 
-// ?project=https://example.com/project.sb3    
+// ?project=https://example.com/project.sb3 
+
 var onVmInit = function onVmInit(vm) {
   // Load a project from a URL. Example: ?project_url=/example.sb3
-  var projectLoaded = true;
+  var projectLoaded = false;
 
   // We need to wait the VM start and the default project to be loaded before
   // trying to load the url project, otherwiste we can get a mix of both.
@@ -135,11 +136,11 @@ var Player = function Player(_ref) {
   }, isPlayerOnly && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: onSeeInside
   }, 'See inside'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_containers_gui_jsx__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    onVmInit: onVmInit,
     canEditTitle: true,
     enableCommunity: true,
     isPlayerOnly: isPlayerOnly,
-    projectId: projectId,
-    onVmInit: onVmInit
+    projectId: projectId
   }));
 };
 Player.propTypes = {
