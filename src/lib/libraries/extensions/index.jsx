@@ -57,22 +57,48 @@ import pasorichInsetIconURL from './pasorich/pasorich-small.png';
 
 export default [
     {
-        name: 'PaSoRich 0.7.1',
+        name: (
+            <FormattedMessage
+                defaultMessage='PaSoRich 0.7.1'
+                description='PaSoRich 0.7.1'
+                id='gui.extension.pasorichblocks.name'
+            />
+        ),
         extensionId: 'pasorich',
         collaborator: 'con3office',
         iconURL: pasorichIconURL,
         insetIconURL: pasorichInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Read SmartCard IDm.'
+                defaultMessage='Read SmartCard IDm.{psrcredit_en}'
                 description='Read SmartCard IDm.'
                 id='gui.extension.pasorichblocks.description'
+                values={{
+                    psrcredit_ja:<div style={{fontSize: '0.6em'}}>PaSoRi はソニーグループ株式会社またはその関連会社の登録商標または商標です。</div>,
+                    psrcredit_ja_Hira:<div style={{fontSize: '0.6em', lineHeight: '1.3', marginTop: '0.5em'}}>パソリ はソニーグループまたはかんれんがいしゃのとうろくしょうひょうです。</div>,
+                    psrcredit_en:<div style={{fontSize: '0.6em'}}>PaSoRi is a registered trademark or trademark of Sony Group Corporation or its affiliated companies.</div>,
+                }}
             />
         ),
-        featured: true
+        featured: true,
+        translationMap: {
+            'ja': {
+                'gui.extension.pasorichblocks.name': 'パソリッチ 0.7.1',
+                'gui.extension.pasorichblocks.description': 'ICカードのIDmを読み取る。{psrcredit_ja}'
+            },
+            'ja-Hira': {
+                'gui.extension.pasorichblocks.name': 'ぱそりっち 0.7.1',
+                'gui.extension.pasorichblocks.description': 'ICかーどのばんごうをよみとる。{psrcredit_ja_Hira}'
+            }}
     },
     {
-        name: 'NumberBank 2.0',
+        name: (
+            <FormattedMessage
+                defaultMessage='NumberBank 2.0'
+                description='NumberBank 2.0'
+                id='gui.extension.numberbankblocks.name'
+            />
+        ),
         extensionId: 'numberbank',
         collaborator: 'con3office',
         iconURL: numberbankIconURL,
@@ -85,7 +111,17 @@ export default [
             />
         ),
         internetConnectionRequired: true,
-        featured: true
+        featured: true,
+        translationMap: {
+            'ja': {
+                'gui.extension.numberbankblocks.name': 'ナンバーバンク 2.0',
+                'gui.extension.numberbankblocks.description': '値をクラウドに保存する。'
+            },
+            'ja-Hira': {
+                'gui.extension.numberbankblocks.name': 'なんばーばんく 2.0',
+                'gui.extension.numberbankblocks.description': 'あたいをクラウドにほぞんする。'
+            }
+        }
     },
     {
         name: (
