@@ -52,47 +52,79 @@ import qrcodeInsetIconURL from './qrcode/qrcode-small.svg';
 import numberbankIconURL from './numberbank/numberbank_entry.png';
 import numberbankInsetIconURL from './numberbank/numberbank_inset.png';
 
-import pasorichIconURL from './pasorich/pasorich.png';
-import pasorichInsetIconURL from './pasorich/pasorich-small.png';
+import pasorichIconURL from './pasorich/pasorich_entry.png';
+import pasorichInsetIconURL from './pasorich/pasorich_inset.png';
 
 export default [
     {
-        name: 'PaSoRich 0.7.1',
+        name: (
+            <FormattedMessage
+                defaultMessage="PaSoRich"
+                description="Name for PaSoRich extension"
+                id="gui.extension.pasorichblocks.name"
+            />
+        ),
         extensionId: 'pasorich',
         collaborator: 'con3office',
         iconURL: pasorichIconURL,
         insetIconURL: pasorichInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Read SmartCard IDm.'
-                description='Read SmartCard IDm.'
-                id='gui.extension.pasorichblocks.description'
+                defaultMessage="Read SmartCard IDm."
+                description="Read SmartCard IDm."
+                id="gui.extension.pasorichblocks.description"
             />
         ),
-        featured: true
+        featured: true,
+        translationMap: {
+            'ja': {
+                'gui.extension.pasorichblocks.name': 'パソリッチ 2.0',
+                'gui.extension.pasorichblocks.description': 'ICカードのIDmを読み取る。'
+            },
+            'ja-Hira': {
+                'gui.extension.pasorichblocks.name': 'ぱそりっち 2.0',
+                'gui.extension.pasorichblocks.description': 'ICかーどのばんごうをよみとる。'
+            }
+        }
     },
     {
-        name: 'NumberBank 2.0',
+        name: (
+            <FormattedMessage
+                defaultMessage="NumberBank 2.0"
+                description="Name for NumberBank extension"
+                id="gui.extension.numberbankblocks.name"
+            />
+        ),
         extensionId: 'numberbank',
         collaborator: 'con3office',
         iconURL: numberbankIconURL,
         insetIconURL: numberbankInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Store value to cloud.'
-                description='Store value to cloud.'
-                id='gui.extension.numberbankblocks.description'
+                defaultMessage="Store value to cloud."
+                description="Store value to cloud."
+                id="gui.extension.numberbankblocks.description"
             />
         ),
         internetConnectionRequired: true,
-        featured: true
+        featured: true,
+        translationMap: {
+            'ja': {
+                'gui.extension.numberbankblocks.name': 'ナンバーバンク 2.0',
+                'gui.extension.numberbankblocks.description': '値をクラウドに保存する。'
+            },
+            'ja-Hira': {
+                'gui.extension.numberbankblocks.name': 'なんばーばんく 2.0',
+                'gui.extension.numberbankblocks.description': 'あたいをクラウドにほぞんする。'
+            }
+        }
     },
     {
         name: (
             <FormattedMessage
-                defaultMessage='QR Code'
-                description='Name for the QR Code extension'
-                id='gui.extension.qrcodeblocks.name'
+                defaultMessage="QR Code"
+                description="Name for the QR Code extension"
+                id="gui.extension.qrcodeblocks.name"
             />
         ),
         extensionId: 'qrcode',
@@ -101,14 +133,17 @@ export default [
         insetIconURL: qrcodeInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Scan QR Code.{credit_en}'
-                description='Description for the QR Code extension'
+                defaultMessage="Scan QR Code.{credit_en}"
+                description="Description for the QR Code extension"
                 values={{
-                    credit_ja:<div style={{fontSize: '0.6em'}}>QRコードは株式会社デンソーウェーブの登録商標です。</div>,
-                    credit_ja_Hira:<div style={{fontSize: '0.6em', lineHeight: '1.3', marginTop: '0.5em'}}>QRコードはかぶしきがいしゃデンソーウェーブのとうろくしょうひょうです。</div>,
-                    credit_en:<div style={{fontSize: '0.6em'}}>QR Code is a registered trademark of DENSO WAVE.</div>
+                    // eslint-disable-next-line react/jsx-no-literals
+                    credit_ja: <div style={{fontSize: '0.6em'}}>QRコードは株式会社デンソーウェーブの登録商標です。</div>,
+                    // eslint-disable-next-line react/jsx-no-literals
+                    credit_ja_Hira: <div style={{fontSize: '0.6em', lineHeight: '1.3', marginTop: '0.5em'}}>QRコードはかぶしきがいしゃデンソーウェーブのとうろくしょうひょうです。</div>,
+                    // eslint-disable-next-line react/jsx-no-literals
+                    credit_en: <div style={{fontSize: '0.6em'}}>QR Code is a registered trademark of DENSO WAVE.</div>
                 }}
-                id='gui.extension.qrcodeblocks.description'
+                id="gui.extension.qrcodeblocks.description"
             />
         ),
         featured: true,
@@ -116,14 +151,14 @@ export default [
         internetConnectionRequired: false,
         bluetoothRequired: false,
         translationMap: {
-          'ja': {
-              'gui.extension.qrcodeblocks.name': 'QRコード',
-              'gui.extension.qrcodeblocks.description': 'QRコードを読み取ります。{credit_ja}'
-          },
-          'ja-Hira': {
-              'gui.extension.qrcodeblocks.name': 'QRコード',
-              'gui.extension.qrcodeblocks.description': 'QRコードをよみとります。{credit_ja_Hira}'
-          }
+            'ja': {
+                'gui.extension.qrcodeblocks.name': 'QRコード',
+                'gui.extension.qrcodeblocks.description': 'QRコードを読み取ります。{credit_ja}'
+            },
+            'ja-Hira': {
+                'gui.extension.qrcodeblocks.name': 'QRコード',
+                'gui.extension.qrcodeblocks.description': 'QRコードをよみとります。{credit_ja_Hira}'
+            }
         }
     },
     {
