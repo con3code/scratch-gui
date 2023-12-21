@@ -59,15 +59,9 @@ export default [
     {
         name: (
             <FormattedMessage
-<<<<<<< HEAD
                 defaultMessage="PaSoRich"
                 description="Name for PaSoRich extension"
                 id="gui.extension.pasorichblocks.name"
-=======
-                defaultMessage='PaSoRich 0.7.1'
-                description='PaSoRich 0.7.1'
-                id='gui.extension.pasorichblocks.name'
->>>>>>> 0d880eef5f5fe24b382b829b43896d7a0e3b9da2
             />
         ),
         extensionId: 'pasorich',
@@ -76,26 +70,14 @@ export default [
         insetIconURL: pasorichInsetIconURL,
         description: (
             <FormattedMessage
-<<<<<<< HEAD
                 defaultMessage="Read SmartCard IDm."
                 description="Read SmartCard IDm."
                 id="gui.extension.pasorichblocks.description"
-=======
-                defaultMessage='Read SmartCard IDm.{psrcredit_en}'
-                description='Read SmartCard IDm.'
-                id='gui.extension.pasorichblocks.description'
-                values={{
-                    psrcredit_ja:<div style={{fontSize: '0.6em'}}>PaSoRi はソニーグループ株式会社またはその関連会社の登録商標または商標です。</div>,
-                    psrcredit_ja_Hira:<div style={{fontSize: '0.6em', lineHeight: '1.3', marginTop: '0.5em'}}>パソリ はソニーグループまたはかんれんがいしゃのとうろくしょうひょうです。</div>,
-                    psrcredit_en:<div style={{fontSize: '0.6em'}}>PaSoRi is a registered trademark or trademark of Sony Group Corporation or its affiliated companies.</div>,
-                }}
->>>>>>> 0d880eef5f5fe24b382b829b43896d7a0e3b9da2
             />
         ),
         featured: true,
         translationMap: {
             'ja': {
-<<<<<<< HEAD
                 'gui.extension.pasorichblocks.name': 'パソリッチ 2.0',
                 'gui.extension.pasorichblocks.description': 'ICカードのIDmを読み取る。'
             },
@@ -104,28 +86,13 @@ export default [
                 'gui.extension.pasorichblocks.description': 'ICかーどのばんごうをよみとる。'
             }
         }
-=======
-                'gui.extension.pasorichblocks.name': 'パソリッチ 0.7.1',
-                'gui.extension.pasorichblocks.description': 'ICカードのIDmを読み取る。{psrcredit_ja}'
-            },
-            'ja-Hira': {
-                'gui.extension.pasorichblocks.name': 'ぱそりっち 0.7.1',
-                'gui.extension.pasorichblocks.description': 'ICかーどのばんごうをよみとる。{psrcredit_ja_Hira}'
-            }}
->>>>>>> 0d880eef5f5fe24b382b829b43896d7a0e3b9da2
     },
     {
         name: (
             <FormattedMessage
-<<<<<<< HEAD
                 defaultMessage="NumberBank 2.0"
                 description="Name for NumberBank extension"
                 id="gui.extension.numberbankblocks.name"
-=======
-                defaultMessage='NumberBank 2.0'
-                description='NumberBank 2.0'
-                id='gui.extension.numberbankblocks.name'
->>>>>>> 0d880eef5f5fe24b382b829b43896d7a0e3b9da2
             />
         ),
         extensionId: 'numberbank',
